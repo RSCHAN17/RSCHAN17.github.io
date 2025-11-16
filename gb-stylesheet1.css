@@ -1,0 +1,240 @@
+body {
+  background-color: rgb(57, 62, 70);
+  color: rgb(238, 238, 238);
+  margin: 0 2.5%;
+  padding: 2.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+.navigation {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  border: 5px solid rgb(0, 173, 181);
+}
+
+.navigation a {
+  display: block;
+  background-color: rgb(34, 40, 49);
+  color: rgb(238, 238, 238);
+  text-decoration: none;
+  font-size: 1rem;
+  width: 25%;
+  text-align: center;
+  align-content: center;
+}
+
+
+nav a:hover{
+  background-color: rgb(0, 173, 181);
+}
+
+h1, h2, h3, footer {
+  font-family: Orbitron;
+  font-weight: 700;
+  color: rgb(238, 238, 238);
+  text-align: center;
+}
+
+.about {
+  width: 70%;
+  margin: 25px auto;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+
+
+#favourites {
+  margin: 50px auto;
+  text-align: center;
+}
+
+#favourites ol {
+  text-align: left;
+}
+
+.imgGrid {
+  display: grid;
+  margin: 0 auto;
+  width: 65%;
+  grid-template: repeat(2,50%) / repeat(2,50%);
+  text-align: center;
+  align-items: center;
+  aspect-ratio: 16/9;
+  gap: 2% 2%;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid rgb(34, 40, 49);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.main h1 {
+  margin-bottom: 5px;
+}
+
+.main p{
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: 5px;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  margin: 0 auto;
+  width: 60%;
+  aspect-ratio: 4/3;
+  grid-template: repeat(5,20%) / repeat(5,20%);
+  gap: 2px 2px;
+  align-content: space-between;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  color: rgb(238, 238, 238);
+  border: 5px solid rgb(0, 173, 181);
+  border-radius: 15px;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.1px;
+  text-align:center;
+}
+
+table, th, td {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 2px;
+}
+
+th {
+  background-color: rgb(0, 173, 181);
+  border: 10px solid black;
+}
+
+td {
+  background-color:  rgb(34, 40, 49);
+  border: 10px solid black;
+}
+
+
+.fullList {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.fullList p {
+  text-align: center;
+}
+
+
+
+#allTropes {
+  columns: 2;
+}
+
+.tropeForm {
+  text-align: center;
+  background-color: rgb(34, 40, 49);
+  color: rgb(238, 238, 238);
+  border-radius: 20px;
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 50px;
+}
+
+.submit {
+  border: 5px black solid;
+  background-color: rgb(0, 173, 181);
+  color: rgb(238, 238, 238);
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(34, 40, 49);
+  color: rgb(238, 238, 238);
+  display: block;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px solid rgb(0, 173, 181);
+
+}
+
+.logo {
+  height: 29px;
+  aspect-ratio: 1;
+}
+
+@media only screen and ((max-width: 768px)) {
+
+  .navigation, .grid, .about, .imgGrid, table, .fullList, .tropeForm {
+    width: 100%;
+  }
+  .imgGrid {
+    margin-top: 25px;
+  }
+  .navigation a {
+    font-size: 0.7rem;
+  }
+  .box {
+    font-size: 0.7rem;
+  }
+  .grid {
+    aspect-ratio: 1;
+  }
+  .main h1 {
+    margin-bottom: 0;
+    height: 70%
+  }
+  
+  #favourites table {
+    margin: 0;
+  }
+  .tab{
+    display: block;
+    justify-content: center;
+  }
+  .description, #allTropes {
+    font-size: 0.7rem;
+    margin : 25px 0;
+  }
+  footer {
+    padding: 0;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+
+}

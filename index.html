@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="gb-stylesheet1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <title>Gig Bingo</title>
+
+
+    </head>
+
+    <body>
+        <nav class="navigation">
+            <a href="#about">What is Gig Bingo?</a>
+            <a href="#board">Bingo Board</a>
+            <a href="#favourites">Running Gig Count</a>
+            <a href="#tropes">All the Clichés</a>               
+        </nav>
+
+        <div class="about" id="about">
+            <h2><u>What is Gig Bingo?</u></h2>
+            <div class="description">
+                <p>
+                    My name is Raza, I've always had a love for live music, so far been to over 50 gigs (over 20 this year). Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, and why not turn those clichés into a game? Hence the birth of Gig Bingo!
+                </p>
+            </div>
+        </div>
+        <div class="imgGrid">
+            <div class="container"><img class="image" src="Images\img1.jpg"></div>
+            <div class="container"><img class="image" src="Images\img2.jpg"></div>
+            <div class="container"><img class="image" src="Images\img3.jpg"></div>
+            <div class="container"><img class="image" src="Images\img4.jpg"></div>
+        </div>
+        <div class="main" id="board">
+            <h1>Gig Bingo</h1>
+            <p>(pressable tiles!)</p>
+        </div>
+        <div class="grid">
+            <button class="box" id="a1" onclick="pressed(id)"></button>
+            <button class="box" id="a2" onclick="pressed(id)"></button>
+            <button class="box" id="a3" onclick="pressed(id)"></button>
+            <button class="box" id="a4" onclick="pressed(id)"></button>
+            <button class="box" id="a5" onclick="pressed(id)"></button>
+            <button class="box" id="a6" onclick="pressed(id)"></button>
+            <button class="box" id="a7" onclick="pressed(id)"></button>
+            <button class="box" id="a8" onclick="pressed(id)"></button>
+            <button class="box" id="a9" onclick="pressed(id)"></button>
+            <button class="box" id="a10" onclick="pressed(id)"></button>
+            <button class="box" id="a11" onclick="pressed(id)"></button>
+            <button class="box" id="a12" onclick="pressed(id)"></button>
+            <button class="box" id="Free" onclick="pressed(id)">Free Square (Tall man spawning directly in front of you)</button>
+            <button class="box" id="a13" onclick="pressed(id)"></button>
+            <button class="box" id="a14" onclick="pressed(id)"></button>            
+            <button class="box" id="a15" onclick="pressed(id)"></button>
+            <button class="box" id="a16" onclick="pressed(id)"></button>
+            <button class="box" id="a17" onclick="pressed(id)"></button>
+            <button class="box" id="a18" onclick="pressed(id)"></button>
+            <button class="box" id="a19" onclick="pressed(id)"></button>
+            <button class="box" id="a20" onclick="pressed(id)"></button>
+            <button class="box" id="a21" onclick="pressed(id)"></button>
+            <button class="box" id="a22" onclick="pressed(id)"></button>
+            <button class="box" id="a23" onclick="pressed(id)"></button>
+            <button class="box" id="a24" onclick="pressed(id)"></button>
+
+
+        </div>
+
+
+
+
+        <div id="favourites">
+            <section id="ranking">
+                <h2><u>Running Gig Count</u></h2>
+                <table class="tab">
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col">Years</th>
+                            <th scope="col">Number of Gigs</th>
+                            <th scope="col">Favorite of the Period</th>
+                            <th scope="col">Festivals</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2017 - 2019</td>
+                            <td>19</td>
+                            <td>AJR</td>
+                            <td><ol><li>Reading (Weekend) / 2017</li> <li>Community / 2018</li></ol></td>
+                        </tr>
+                        <tr>
+                            <td>2020 - 2022</td>
+                            <td>7</td>
+                            <td>Catfish and the Bottlemen</td>
+                            <td><ol start="3"><li>Wide Awake / 2022</li></ol></td>
+                        </tr>
+                        <tr>
+                            <td>2023 - 2025</td>
+                            <td>28</td>
+                            <td>Lord Huron</td>
+                            <td><ol start="4"><li>Slam dunk / 2024</li><li>A-list / 2025</li><li>BST / 2025</li><li>Reading (Friday) / 2025</li></td></ol></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+
+
+        <div class="fullList" id="tropes">
+            <h2><u>All the Clichés</u></h2>
+            <div class="description">
+                <p>
+                    Here's a list of all the clichés, the list is constantly growing so if you spot a clichés fill in the form bellow:
+                </p>
+            </div>
+            <ul id="allTropes">
+                <li>Tall man spawning directly in front of you</li>
+                <li>Someone turned around whole song</li>
+                <li>Facetime</li>
+                <li>Weird device</li>
+                <li>No clue what's going on</li>
+                <li>On shoulders</li>
+                <li>Crowd surfer</li>
+                <li>lookalike</li>
+                <li>Weird interaction with stranger</li>
+                <li>Getting / Viewing beered</li>
+                <li>Clothing Chucked</li>
+                <li>Lighter</li>
+                <li>Someone you actually know</li>
+                <li>Premature moshing</li>
+                <li>Blinding Lights</li>
+                <li>Confetti</li>
+                <li>Cardboard sign</li>
+                <li>Screaming the whole time</li>
+                <li>Mismatch acts</li>
+                <li>Uncomfortably long encore wait</li>
+                <li>Random single living their best life</li>
+                <li>Football shirt</li>
+                <li>Movie/TV shirt</li>
+                <li>This is our "last song"</li>
+                <li>Artist "can't believe they're there"</li>
+                <li>Missing shoe in mosh</li>
+                <li>Phone torch looking for something</li>
+                <li>S/O dragged along but having an amazing time</li>
+                <li>Getting a ticket day of</li>
+                <li>Scary fan (way too invested)</li>
+                <li>Artist restarting the song</li>
+                <li>The artist's music being blasted on route back</li>
+                <li>Someone dressed like the artist</li>
+                <li>Fake merch</li>
+                <li>Queuing up for over 3 hrs outside</li>
+                <li>Setlist / drumstick being chucked into the crowd</li>
+                <li>Surprise guest</li>
+                <li>Snapchat</li>
+                <li>Getting Merch</li>
+                <li>Music industry/political/religious speech</li>
+            </ul>
+        </div>
+
+        <div class="tropeForm">
+            <form action="" method="POST">
+                <h3>Clichés you want to see in Bingo</h3>
+                <label for="name">Name:</label>
+    	        <input id="name" name="name" type="text" required minlength="3" maxlength="100">
+                <br><br>
+                <label for="insta">Instagram:</label>
+                <input id="insta" name="insta" type="text" required minlength="3" maxlength="100">
+                <br><br>
+                <label for="trope">Cliché:</label>
+    	        <input id="trope" name="trope" type="text" required minlength="3" maxlength="100">
+                <br><br>
+                <input class ="submit" type="submit" value="Send in!">
+                <br><br>
+            </form>
+        </div>
+        <footer>
+            <p>Watch the gigs unfold...</p>
+            
+            <p>
+                <a target="_blank" href="https://www.instagram.com/raza.chandna/"><img class="logo" src="Images\Instagram_Glyph_Gradient.png"></div></a>
+            </p>
+        </footer>
+    <script src="gb1.js">
+    </script>
+    </body>
+
+</html>
