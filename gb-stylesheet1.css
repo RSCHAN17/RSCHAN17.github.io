@@ -200,7 +200,7 @@ footer {
   .imgGrid {
   display: grid;
   margin: 0 auto;
-  width: 50%;
+  width: 65%;
   grid-template: unset;
   grid-template-rows: repeat(4,25%);
   text-align: center;
@@ -243,3 +243,4 @@ footer {
     margin-bottom: 25px;
   }
 }
+
