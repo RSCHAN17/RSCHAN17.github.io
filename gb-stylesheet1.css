@@ -206,7 +206,7 @@ footer {
   margin-top: 25px;
   display: grid;
   margin: 0 auto;
-  width: 80%
+  width: 80%;
   grid-template-rows: repeat(4,25%);
   align-items: center;
   gap: 2%;
@@ -246,4 +246,5 @@ footer {
 
 
 }
+
 
