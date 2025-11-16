@@ -199,19 +199,26 @@ footer {
 
 @media only screen and ((max-width: 768px)) {
 
-  .navigation, .grid, .about, .imgGrid, table, .fullList, .tropeForm {
+  .navigation, .grid, .about, table, .fullList, .tropeForm {
     width: 100%;
   }
   .imgGrid {
-    margin-top: 25px;
+  margin-top: 25px;
+  display: grid;
+  margin: 0 auto;
+  width: 80%
+  grid-template-rows: repeat(4,25%);
+  align-items: center;
+  gap: 2%;
   }
   .navigation a {
     font-size: 0.7rem;
   }
   .box {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .grid {
+    gap: 5px 5px;
     aspect-ratio: 1;
   }
   .main h1 {
@@ -234,7 +241,9 @@ footer {
     padding: 0;
     align-items: center;
     font-size: 0.8rem;
+    bottom-margin: 10px;
   }
 
 
 }
+
