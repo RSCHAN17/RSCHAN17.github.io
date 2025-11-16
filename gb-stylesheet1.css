@@ -198,7 +198,7 @@ footer {
 
 @media only screen and ((max-width: 768px)) {
 
-  .navigation, .grid, .about, table, .fullList, .tropeForm {
+  .navigation, .about, table, .fullList, .tropeForm {
     width: 100%;
   }
   .imgGrid {
@@ -218,6 +218,7 @@ footer {
   }
   .grid {
     gap: 5px 5px;
+    width: 95%;
     aspect-ratio: 1;
   }
   .main h1 {
@@ -240,11 +241,12 @@ footer {
     padding: 0;
     align-items: center;
     font-size: 0.8rem;
-    bottom-margin: 10px;
+    bottom-margin: 25px;
   }
 
 
 }
+
 
 
 
