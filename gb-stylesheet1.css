@@ -1,19 +1,23 @@
 body {
   background-color: rgb(57, 62, 70);
   color: rgb(238, 238, 238);
-  margin: 0 2.5%;
-  padding: 2.5%;
+  margin: 0;
+  padding: 0;
   font-family: "Rubik", sans-serif;
 }
 
 .navigation {
-  width: 100%;
+  width: 97.5%;
   height: 50px;
+  margin: 0 auto;
   overflow: hidden;
   display: flex;
+  position: sticky;
+  top: 0;
   border-radius: 10px;
   justify-content: center;
   border: 5px solid rgb(0, 173, 181);
+  z-index: 10;
 }
 
 .navigation a {
@@ -40,7 +44,7 @@ h1, h2, h3, footer {
 
 .about {
   width: 70%;
-  margin: 25px auto;
+  margin: 0 auto;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -174,7 +178,8 @@ td {
 }
 
 footer {
-  width: 100%;
+  width: 97.5%;
+  margin: 0 auto;
   text-align: center;
   background-color: rgb(34, 40, 49);
   color: rgb(238, 238, 238);

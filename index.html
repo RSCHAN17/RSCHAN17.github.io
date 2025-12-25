@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="gb-stylesheet1.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <title>Gig Bingo</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="gb-stylesheet1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="gb1.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <title>Gig Bingo</title>
+</head>
+
+<body>
+
         <nav class="navigation">
             <a href="#about">What is Gig Bingo?</a>
             <a href="#board">Bingo Board</a>
             <a href="#favourites">Running Gig Count</a>
-            <a href="#tropes">All the Clichés</a>               
+            <a href="#tropes">All the Clichés</a>
         </nav>
+
 
         <div class="about" id="about">
             <h2><u>What is Gig Bingo?</u></h2>
             <div class="description">
                 <p>
-                    My name is Raza, I've always had a love for live music, so far been to over 50 gigs (over 20 this year). Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, and why not turn those clichés into a game? Hence the birth of Gig Bingo!
+                    My name is Raza, I've always had a love for live music, so far been to over 50 gigs (over 20 this
+                    year).
+                    Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, and
+                    why
+                    not turn those clichés into a game? Hence the birth of Gig Bingo!
                 </p>
             </div>
         </div>
@@ -49,9 +59,10 @@
             <button class="box" id="a10" onclick="pressed(id)"></button>
             <button class="box" id="a11" onclick="pressed(id)"></button>
             <button class="box" id="a12" onclick="pressed(id)"></button>
-            <button class="box" id="Free" onclick="pressed(id)">Free Square (Tall man spawning directly in front of you)</button>
+            <button class="box" id="Free" onclick="pressed(id)">Free Square (Tall man spawning directly in front of
+                you)</button>
             <button class="box" id="a13" onclick="pressed(id)"></button>
-            <button class="box" id="a14" onclick="pressed(id)"></button>            
+            <button class="box" id="a14" onclick="pressed(id)"></button>
             <button class="box" id="a15" onclick="pressed(id)"></button>
             <button class="box" id="a16" onclick="pressed(id)"></button>
             <button class="box" id="a17" onclick="pressed(id)"></button>
@@ -68,7 +79,7 @@
             <section id="ranking">
                 <h2><u>Running Gig Count</u></h2>
                 <table class="tab">
-                    
+
                     <thead>
                         <tr>
                             <th scope="col">Years</th>
@@ -82,19 +93,36 @@
                             <td>2017 - 2019</td>
                             <td>19</td>
                             <td>AJR</td>
-                            <td><ol><li>Reading (Weekend) / 2017</li> <li>Community / 2018</li></ol></td>
+                            <td>
+                                <ol>
+                                    <li>Reading (Weekend) / 2017</li>
+                                    <li>Community / 2018</li>
+                                </ol>
+                            </td>
                         </tr>
                         <tr>
                             <td>2020 - 2022</td>
                             <td>7</td>
                             <td>Catfish and the Bottlemen</td>
-                            <td><ol start="3"><li>Wide Awake / 2022</li></ol></td>
+                            <td>
+                                <ol start="3">
+                                    <li>Wide Awake / 2022</li>
+                                </ol>
+                            </td>
                         </tr>
                         <tr>
                             <td>2023 - 2025</td>
                             <td>28</td>
                             <td>Lord Huron</td>
-                            <td><ol start="4"><li>Slam dunk / 2024</li><li>A-list / 2025</li><li>BST / 2025</li><li>Reading (Friday) / 2025</li></td></ol></td>
+                            <td>
+                                <ol start="4">
+                                    <li>Slam dunk / 2024</li>
+                                    <li>A-list / 2025</li>
+                                    <li>BST / 2025</li>
+                                    <li>Reading (Friday) / 2025</li>
+                            </td>
+                            </ol>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -105,7 +133,9 @@
             <h2><u>All the Clichés</u></h2>
             <div class="description">
                 <p>
-                    Here's a list of all the clichés, the list is constantly growing so if you spot a clichés fill in the form bellow:
+                    Here's a list of all the clichés, the list is constantly growing so if you spot a clichés fill in
+                    the
+                    form bellow:
                 </p>
             </div>
             <ul id="allTropes">
@@ -156,27 +186,28 @@
             <form action="" method="POST">
                 <h3>Clichés you want to see in Bingo</h3>
                 <label for="name">Name:</label>
-    	        <input id="name" name="name" type="text" required minlength="3" maxlength="100">
+                <input id="name" name="name" type="text" required minlength="3" maxlength="100">
                 <br><br>
                 <label for="insta">Instagram:</label>
                 <input id="insta" name="insta" type="text" required minlength="3" maxlength="100">
                 <br><br>
                 <label for="trope">Cliché:</label>
-    	        <input id="trope" name="trope" type="text" required minlength="3" maxlength="100">
+                <input id="trope" name="trope" type="text" required minlength="3" maxlength="100">
                 <br><br>
-                <input class ="submit" type="submit" value="Send in!">
+                <input class="submit" type="submit" value="Send in!">
                 <br><br>
             </form>
         </div>
-        <footer>
-            <p>Watch the gigs unfold...</p>
-            
-            <p>
-                <a target="_blank" href="https://www.instagram.com/raza.chandna/"><img class="logo" src="Images\Instagram_Glyph_Gradient.png"></div></a>
-            </p>
-        </footer>
-    <script src="gb1.js">
-    </script>
-    </body>
+
+    <footer>
+        <p>Watch the gigs unfold...</p>
+
+        <p>
+            <a target="_blank" href="https://www.instagram.com/raza.chandna/"><img class="logo"
+                    src="Images\Instagram_Glyph_Gradient.png"></div></a>
+        </p>
+    </footer>
+
+</body>
 
 </html>
