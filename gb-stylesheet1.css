@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
 body {
   background-color: rgb(57, 62, 70);
   color: rgb(238, 238, 238);
@@ -101,7 +106,7 @@ h1, h2, h3, footer {
   position: relative;
   display: grid;
   margin: 0 auto;
-  width: 60%;
+  width: 55%;
   aspect-ratio: 4/3;
   grid-template: repeat(5,20%) / repeat(5,20%);
   gap: 2px 2px;
@@ -146,6 +151,7 @@ td {
 .fullList {
   width: 70%;
   margin: 50px auto;
+  margin-bottom: 25px;
 }
 
 .fullList p {
