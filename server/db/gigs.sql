@@ -16,11 +16,22 @@ values
 
 DROP TABLE IF EXISTS temp;
 create table temp as select * from gigs order by date asc;
-alter table temp
-drop column gig_id;
+alter table temp drop column gig_id;
 truncate table gigs restart identity;
 insert into gigs (date,name,type) select * from temp;
 drop table temp;
-alter table gigs
-add primary key (gig_id);
+alter table gigs add primary key (gig_id);
+
+DROP TABLE IF EXISTS cliches;
+create table cliches (
+    cliche_id int generated always as identity,
+    cliche varchar(255) not null,
+    status varchar(100) default 'accepted',
+    primary key (cliche_id),
+    check (status in ('pending','accepted','rejected'))
+);
+
+insert into cliches (cliche)
+values
+    ('Someone turned around whole song'),('Facetime'),('Weird device'),('No clue what''s going on'),('On shoulders'),('Crowd surfer'),('Lookalike'),('Weird interaction with stranger'),('Getting / Viewing beered'),('Clothing Chucked'),('Lighter'),('Someone you actually know'),('Premature moshing'),('Blinding Lights'),('Confetti'),('Cardboard sign'),('Screaming the whole time'),('Mismatched acts'),('Uncomfortably long encore wait'),('Random single living their best life'),('Music industry/ political/ religious speech'),('Football shirt'),('Movie/TV shirt'),('This is our "last song"'),('Artist "can''t believe they''re there"'),('Missing shoe in mosh'),('Phone torch looking for something'),('S/O dragged along but having an amazing time'),('Getting a ticket day of'),('Scary fan (way too invested)'),('Artist restarting the song'),('The artist''s music being blasted on route back'),('Someone dressed like the artist'),('Fake merch'),('Queuing up for over 3 hrs outside'),('Setlist / drumstick being chucked into the crowd'),('Surprise guest'),('Snapchat'),('Getting Merch');
 
