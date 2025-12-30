@@ -2,6 +2,7 @@ const Cliche = require('../models/Cliche')
 
 async function index(req, res) {
     try {
+        console.log('test1');
         const cliches = await Cliche.getAll();
         res.status(200).json(cliches);
     } catch(err) {
