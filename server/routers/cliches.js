@@ -3,7 +3,7 @@ const clicheController = require('../controllers/cliches')
 
 const clicheRouter = Router();
 
-clicheRouter.get("/", clicheController.index);
+clicheRouter.get("/all", clicheController.index);
 clicheRouter.post("/", clicheController.create);
 
 module.exports = clicheRouter;
