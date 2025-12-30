@@ -10,7 +10,7 @@ class Cliche {
     }
 
     static async getAll() {
-    const response = await db.query("SELECT cliche FROM cliches;");
+    const response = await db.query("SELECT cliche FROM cliches WHERE status='accepted';");
     if (response.rows.length === 0) {
         throw new Error("No cliches available.")
     }
