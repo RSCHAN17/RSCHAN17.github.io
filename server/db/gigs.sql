@@ -27,6 +27,8 @@ create table cliches (
     cliche_id int generated always as identity,
     cliche varchar(255) not null,
     status varchar(100) default 'accepted',
+    origin varchar(100) default 'BTFAQL',
+    insta varchar(100) default 'raza.chandna',
     primary key (cliche_id),
     check (status in ('pending','accepted','rejected'))
 );
