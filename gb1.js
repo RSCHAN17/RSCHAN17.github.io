@@ -6,8 +6,26 @@ const clicheList = document.querySelector('#allTropes')
 const clicheForm = document.querySelector('#clicheForm')
 clicheForm.addEventListener("submit",submitCliche)
 
-async function submitCliche() {
-    
+async function submitCliche(e) {
+    e.preventDefault();
+    let origin = document.querySelector("#origin").value;
+    let insta = document.querySelector("#insta").value;
+    let trope = document.querySelector("#trope").value;
+    try {
+        const response = await fetch('https://rschan17-github-io.onrender.com/cliches',
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    "cliche":trope,
+                    "origin":origin,
+                    "insta":insta
+                })
+            }
+        )
+    } catch (error) {
+        new Error("Failed to post cliche")
+    }
 }
 
 
