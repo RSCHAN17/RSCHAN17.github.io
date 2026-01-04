@@ -36,4 +36,6 @@ create table cliches (
 insert into cliches (cliche)
 values
     ('Tall man spawning directly in front of you'),('Someone turned around whole song'),('Facetime'),('Weird device'),('No clue what''s going on'),('On shoulders'),('Crowd surfer'),('Lookalike'),('Weird interaction with stranger'),('Getting / Viewing beered'),('Clothing Chucked'),('Lighter'),('Someone you actually know'),('Premature moshing'),('Blinding Lights'),('Confetti'),('Cardboard sign'),('Screaming the whole time'),('Mismatched acts'),('Uncomfortably long encore wait'),('Random single living their best life'),('Music industry/ political/ religious speech'),('Football shirt'),('Movie/TV shirt'),('This is our "last song"'),('Artist "can''t believe they''re there"'),('Missing shoe in mosh'),('Phone torch looking for something'),('S/O dragged along but having an amazing time'),('Getting a ticket day of'),('Scary fan (way too invested)'),('Artist restarting the song'),('The artist''s music being blasted on route back'),('Someone dressed like the artist'),('Fake merch'),('Queuing up for over 3 hrs outside'),('Setlist / drumstick being chucked into the crowd'),('Surprise guest'),('Snapchat'),('Getting Merch');
-
+insert into cliches (cliche)
+values
+    ('Same gig merch'),('"oh my friends are just ahead"'),('Snaking 50m ahead'),('Lighthouse torch person'),('On phone more than watching gig'),('Vaping'),('Follows set list'),('Screaming louder than the artist'),('Talking through song'),('Thanking the crew');
