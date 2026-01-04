@@ -139,6 +139,10 @@ table, th, td {
   padding: 2px;
 }
 
+table {
+  width: 40%
+}
+
 th {
   background-color: seagreen;
   border: 10px solid black;
@@ -206,7 +210,7 @@ footer {
 
 @media only screen and ((max-width: 1000px)) {
 
-  .navigation, .about, table, .fullList, .tropeForm {
+  .navigation, .about, table, .fullList, .tropeForm, .grid {
     width: 97.5%;
   }
   .imgGrid {
@@ -225,9 +229,9 @@ footer {
   } */
   .box {
     aspect-ratio: 1;
+    font-size: 0.8rem;
   }
   .grid {
-    width: 100%;
     aspect-ratio: 1;
   }
   .main {
@@ -240,10 +244,10 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
-  .tab{
+  /* .tab{
     display: block;
     justify-content: center;
-  }
+  } */
   .description, #allTropes {
 
     margin : 25px 0;

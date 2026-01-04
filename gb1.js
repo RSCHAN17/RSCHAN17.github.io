@@ -97,57 +97,57 @@ function pressed(id) {
     const diagonal2 = [boxes['a20'],boxes['a16'],boxes['free'],boxes['a9'],boxes['a5']]
     let allLines = [topline,secondline,thirdline,fourthline,fifthline,line1,line2,line3,line4,line5,diagonal1,diagonal2]
 
-    if(document.getElementById(id).style.backgroundColor == 'seagreen' || document.getElementById(id).style.backgroundColor == 'darkolivegreen'){
+    if(document.getElementById(id).style.backgroundColor == 'seagreen' || document.getElementById(id).style.backgroundColor == 'teal'){
         document.getElementById(id).style.backgroundColor = 'darkslategray';
-    } else if(document.getElementById(id).style.backgroundColor == 'teal') {
+    } else if(document.getElementById(id).style.backgroundColor == 'darkolivegreen') {
         for (let i = 1; i <= 24; i++) {
-            boxes[`a${i}`].style.backgroundColor='darkolivegreen';
+            boxes[`a${i}`].style.backgroundColor='teal';
         }
-        boxes[`free`].style.backgroundColor='darkolivegreen'
+        boxes[`free`].style.backgroundColor='teal'
         document.getElementById(id).style.backgroundColor = 'darkslategray';
     } else {document.getElementById(id).style.backgroundColor = 'seagreen';}
 //postcheck    
     allLines.forEach(l => {
         let counter = 0
         for (let i = 0; i <=4; i++) {
-            if(l[i].style.backgroundColor=='seagreen' || l[i].style.backgroundColor=='darkolivegreen') {
+            if(l[i].style.backgroundColor=='seagreen' || l[i].style.backgroundColor=='teal') {
                 counter += 1
             }
         }
         if (counter == 4 && document.getElementById(id).style.backgroundColor == 'darkslategray') {
-            l.forEach(e => {if(e.style.backgroundColor=='darkolivegreen') {
+            l.forEach(e => {if(e.style.backgroundColor=='teal') {
                 e.style.backgroundColor = 'seagreen';
                 document.getElementById(id).style.backgroundColor = 'darkslategray'
         }})} else if (counter == 5) {
-            l.forEach(e => e.style.backgroundColor = 'darkolivegreen');
+            l.forEach(e => e.style.backgroundColor = 'teal');
         } 
     })
     allLines.forEach(l => {
         let counter = 0
         for (let i = 0; i <=4; i++) {
-            if(l[i].style.backgroundColor=='seagreen' || l[i].style.backgroundColor=='darkolivegreen') {
+            if(l[i].style.backgroundColor=='seagreen' || l[i].style.backgroundColor=='teal') {
                 counter += 1
             }
         }
         if (counter == 5) {
-            l.forEach(e => e.style.backgroundColor = 'darkolivegreen');
+            l.forEach(e => e.style.backgroundColor = 'teal');
         }
     })
 
     let totalCount = 0
     for (let i = 1; i <= 24; i++) {
-        if(boxes[`a${i}`].style.backgroundColor == 'darkolivegreen') {
+        if(boxes[`a${i}`].style.backgroundColor == 'teal') {
             totalCount += 1
         }
     }
-    if(boxes['free'].style.backgroundColor == 'darkolivegreen') {
+    if(boxes['free'].style.backgroundColor == 'teal') {
         totalCount+=1
     }
     if(totalCount==25) {
         for (let i = 1; i<=24; i++) {
-            boxes[`a${i}`].style.backgroundColor = 'teal'
+            boxes[`a${i}`].style.backgroundColor = 'darkolivegreen'
         }
-        boxes['free'].style.backgroundColor = 'teal'
+        boxes['free'].style.backgroundColor = 'darkolivegreen'
     }
 }
 
