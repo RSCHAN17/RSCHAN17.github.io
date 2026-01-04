@@ -1,9 +1,12 @@
-
+document.querySelectorAll('.box').innerHTML = `<div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>`
 
 let completeList = []
 const start = fetchAllCliches()
 let bingoBoard = []
-const clicheList = document.querySelector('#allTropes')
+const clicheList1 = document.querySelector('#allTropes1')
+const clicheList2 = document.querySelector('#allTropes2')
 
 const clicheForm = document.querySelector('#clicheForm')
 clicheForm.addEventListener("submit",submitCliche)
@@ -46,10 +49,22 @@ async function fetchAllCliches() {
         const response = await fetch(`https://rschan17-github-io.onrender.com/cliches/all`);
         const data = await response.json()
         for (let i=1; i<data.length; i++) {
-            completeList.push(data[i]["cliche"])
-            const li = clicheList.appendChild(document.createElement("li"))
-            li.innerHTML=data[i]["cliche"];
+            if(i%2===0) {
+                completeList.push(data[i]["cliche"])
+                const li = clicheList1.appendChild(document.createElement("li"))
+                li.className="list-group-item";
+                li.innerHTML=data[i]["cliche"];
+            } else {
+                completeList.push(data[i]["cliche"])
+                const li = clicheList2.appendChild(document.createElement("li"))
+                li.className="list-group-item";
+                li.innerHTML=data[i]["cliche"];            
+            } 
         };
+        if (data.length%2===1) {
+            const li = clicheList2.appendChild(document.createElement("li"))
+            li.className="list-group-item";
+        }
         bingoBoard=shuffle(completeList).slice(0,24)
         idList.forEach(fillBoard)
     } catch (err) {

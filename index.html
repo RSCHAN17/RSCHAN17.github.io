@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="gb-stylesheet1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <script defer src="gb1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
@@ -16,12 +19,30 @@
 
 <body>
 
-        <nav class="navigation">
+        <!-- <nav class="navigation">
             <a href="#about">What is Gig Bingo?</a>
             <a href="#board">Bingo Board</a>
             <a href="#favourites">Running Gig Count</a>
             <a href="#tropes">All the Clichés</a>
-        </nav>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg sticky-top" style="font-family:Orbitron; text-align:center; background-color: darkslategray; color:rgb(238, 238, 238);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#board" style="color:rgb(238, 238, 238);">Gig Bingo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" >
+                <a class="nav-link active" aria-current="page" href="#" style="color:rgb(238, 238, 238);">What is Gig Bingo?</a>
+                <a class="nav-link" href="#favourites" style="color:rgb(238, 238, 238);">Running Gig Count</a>
+                <a class="nav-link" href="#board" style="color:rgb(238, 238, 238);">Bingo Board</a>
+                <a class="nav-link" href="#tropes" style="color:rgb(238, 238, 238);">All the Clichés</a>
+
+            </div>
+            </div>
+        </div>
+        </nav>      
 
 
         <div class="about" id="about">
@@ -136,14 +157,24 @@
                     form bellow:
                 </p>
             </div>
-            <ul id="allTropes">
-                <li>Tall man spawning directly in front of you</li>
-            </ul>
+            <div class="whole">
+                <div class="half-list">
+                <ul class="list-group list-group-flush" id="allTropes1" >
+                    <li class="list-group-item" style="background-color: darkslategray; ">Tall man spawning directly in front of you</li>
+                </ul>
+                </div>
+                <div class="half-list">
+                    <ul class="list-group list-group-flush" id="allTropes2" >
+                </ul>
+                </div>
+            </div>
         </div>
 
         <div class="tropeForm">
             <form id="clicheForm" action="" method="POST">
+                <br>
                 <h3>Clichés you want to see in Bingo</h3>
+                <br>
                 <label for="origin">Name:</label>
                 <input id="origin" name="origin" type="text" required minlength="3" maxlength="100" required>
                 <br><br>
@@ -159,12 +190,16 @@
         </div>
 
     <footer>
+        <p></p>
+
         <p>Watch the gigs unfold...</p>
+        
 
         <p>
             <a target="_blank" href="https://www.instagram.com/raza.chandna/"><img class="logo"
                     src="Images\Instagram_Glyph_Gradient.png"></div></a>
         </p>
+        <br>
     </footer>
 
 </body>

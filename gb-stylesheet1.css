@@ -140,7 +140,7 @@ table, th, td {
 }
 
 table {
-  width: 40%
+  width: 55%;
 }
 
 th {
@@ -157,14 +157,33 @@ td {
   width: 70%;
   margin: 50px auto;
   margin-bottom: 25px;
+
 }
 
 .fullList p {
   text-align: center;
 }
 
-#allTropes {
-  columns: 2;
+.whole {
+  display: flex;
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+.half-list {
+  width: 50%;
+  margin-top: 0;
+  z-index: -1;
+}
+
+.list-group-item {
+  background-color: darkslategray;
+  color:rgb(238, 238, 238);
+  font-family: "Rubik", sans-serif;
+  height:50px;
+  overflow: hidden;
+  display: flex;
+  
 }
 
 .tropeForm {
@@ -172,12 +191,14 @@ td {
   background-color: darkslategray;
   color: rgb(238, 238, 238);
   border-radius: 20px;
-  width: 60%;
+  width: 70%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   font-family: "Rubik", sans-serif;
   margin-bottom: 50px;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
 .submit {
@@ -189,18 +210,19 @@ td {
 }
 
 footer {
-  width: 97.5%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   background-color: darkslategray;
   color: rgb(238, 238, 238);
   display: block;
   justify-content: center;
-  font-family: "Rubik", sans-serif;
-  padding: 10px;
-  border-radius: 10px;
-  border: 5px solid seagreen;
+  font-family: Orbitron;
+}
 
+footer p {
+  padding-top: 10px;
+  margin: 0;
 }
 
 .logo {
@@ -208,10 +230,10 @@ footer {
   aspect-ratio: 1;
 }
 
-@media only screen and ((max-width: 1000px)) {
+@media only screen and ((max-width: 1200px)) {
 
   .navigation, .about, table, .fullList, .tropeForm, .grid {
-    width: 97.5%;
+    width: 95%;
   }
   .imgGrid {
   display: grid;
@@ -248,15 +270,20 @@ footer {
     display: block;
     justify-content: center;
   } */
-  .description, #allTropes {
-
+  .description {
     margin : 25px 0;
   }
-  footer {
-    padding: 0;
-    align-items: center;
 
-    margin-bottom: 25px;
+  .half-list {
+  width: 50%;
+  margin-top: 0;
+}
+
+  .list-group-item {
+    font-size: 0.8rem;
   }
+
+
+
 }
 
