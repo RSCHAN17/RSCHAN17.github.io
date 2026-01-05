@@ -1,12 +1,50 @@
-document.querySelectorAll('.box').innerHTML = `<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>`
+const load = document.querySelectorAll('.box')
+load.innerHTML = `<div class="spinner-border" role="status"> <span class="visually-hidden">Loading...</span></div>`
 
 let completeList = []
 const start = fetchAllCliches()
+const gigs = fetchGigs() 
+const festivals = fetchFestivals()
+const years = fetchYears()
 let bingoBoard = []
 const clicheList1 = document.querySelector('#allTropes1')
 const clicheList2 = document.querySelector('#allTropes2')
+
+const time1 = document.querySelector('#time1')
+const time2 = document.querySelector('#time2')
+const time3 = document.querySelector('#time3')
+const festivals1 = document.querySelector('#festivals1')
+const festivals2 = document.querySelector('#festivals2')
+const festivals3 = document.querySelector('#festivals3')
+
+
+async function fetchGigs() {
+    try {
+        const respAll = await fetch('https://rschan17-github-io.onrender.com/gigs/all')
+        const dataAll = await respAll.json()
+        console.log(dataAll)
+    } catch (error) {
+        
+    }
+}
+async function fetchFestivals() {
+    try {
+        const respFestivals= await fetch('https://rschan17-github-io.onrender.com/gigs/festivals')
+        const dataFestivals = await respFestivals.json()
+        console.log(dataFestivals)
+    } catch (error) {
+        
+    }
+}
+async function fetchYears() {
+    try {
+        const respYears = await fetch('https://rschan17-github-io.onrender.com/gigs/years')
+        const dataYears = await respYears.json()
+        console.log(dataYears)
+    } catch (error) {
+        
+    }
+}
 
 const clicheForm = document.querySelector('#clicheForm')
 clicheForm.addEventListener("submit",submitCliche)
@@ -14,7 +52,7 @@ clicheForm.addEventListener("submit",submitCliche)
 function submitCliche(e) {
     e.preventDefault();
     postCliche(e.target.trope.value,e.target.origin.value,e.target.insta.value)
-    alert("Thank you for your submission, keep an eye out to check if it gets added!");
+    appendAlert(`Nice, you've submitted your cliche, keep an eye out to see if it gets added!`, 'success')
     e.target.trope.value="";
     e.target.origin.value="";
     e.target.insta.value="";
@@ -72,6 +110,8 @@ async function fetchAllCliches() {
     }
 }
 
+
+
 const backup = tropes
 
 function shuffle(array) {
@@ -114,7 +154,7 @@ function pressed(id) {
 
     if(document.getElementById(id).style.backgroundColor == 'seagreen' || document.getElementById(id).style.backgroundColor == 'teal'){
         document.getElementById(id).style.backgroundColor = 'darkslategray';
-    } else if(document.getElementById(id).style.backgroundColor == 'darkolivegreen') {
+    } else if(document.getElementById(id).style.backgroundColor == 'royalblue') {
         for (let i = 1; i <= 24; i++) {
             boxes[`a${i}`].style.backgroundColor='teal';
         }
@@ -160,11 +200,21 @@ function pressed(id) {
     }
     if(totalCount==25) {
         for (let i = 1; i<=24; i++) {
-            boxes[`a${i}`].style.backgroundColor = 'darkolivegreen'
+            boxes[`a${i}`].style.backgroundColor = 'royalblue'
         }
-        boxes['free'].style.backgroundColor = 'darkolivegreen'
+        boxes['free'].style.backgroundColor = 'royalblue'
     }
 }
 
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div style="font-family:Rubik, sans-serif;"><b>${message}</b></div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
 
-
+  alertPlaceholder.append(wrapper)
+}
