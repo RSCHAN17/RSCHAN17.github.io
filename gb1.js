@@ -10,6 +10,8 @@ let bingoBoard = []
 const clicheList1 = document.querySelector('#allTropes1')
 const clicheList2 = document.querySelector('#allTropes2')
 
+const intro = document.querySelector('#intro')
+
 const time1 = document.querySelector('#time1')
 const time2 = document.querySelector('#time2')
 const time3 = document.querySelector('#time3')
@@ -22,27 +24,54 @@ async function fetchGigs() {
     try {
         const respAll = await fetch('https://rschan17-github-io.onrender.com/gigs/all')
         const dataAll = await respAll.json()
-        console.log(dataAll)
+        gig_num=dataAll.length;
+        intro.innerHTML= `My name is Raza, I've always had a love for live music, ${gig_num} gigs so far (30 last year).
+                Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, and why
+                not turn those clichés into a game? Hence the birth of Gig Bingo!`
     } catch (error) {
-        
+        new Error("Failed to get gigs")
     }
 }
 async function fetchFestivals() {
     try {
         const respFestivals= await fetch('https://rschan17-github-io.onrender.com/gigs/festivals')
         const dataFestivals = await respFestivals.json()
-        console.log(dataFestivals)
+        const li1 = festivals1.appendChild(document.createElement("li"))
+        li1.innerHTML=dataFestivals[0].name
+        const li2 = festivals1.appendChild(document.createElement("li"))
+        li2.innerHTML=dataFestivals[1].name
+        const li3 = festivals2.appendChild(document.createElement("li"))
+        li3.innerHTML=dataFestivals[2].name
+        const li4 = festivals3.appendChild(document.createElement("li"))
+        li4.innerHTML=dataFestivals[3].name
+        const li5 = festivals3.appendChild(document.createElement("li"))
+        li5.innerHTML=dataFestivals[4].name
+        const li6 = festivals3.appendChild(document.createElement("li"))
+        li6.innerHTML=dataFestivals[5].name
+        const li7 = festivals3.appendChild(document.createElement("li"))
+        li7.innerHTML=dataFestivals[6].name
     } catch (error) {
-        
+        new Error("Failed to get festivals")
     }
 }
 async function fetchYears() {
     try {
         const respYears = await fetch('https://rschan17-github-io.onrender.com/gigs/years')
         const dataYears = await respYears.json()
-        console.log(dataYears)
-    } catch (error) {
+        let group1 = []
+        let group2 = []
+        let group3 = []
+        for(let i=0;i<3;i++) {
+            group1.push(parseInt(dataYears[i].gigs_that_year))
+            group2.push(parseInt(dataYears[i+3].gigs_that_year))
+            group3.push(parseInt(dataYears[i+6].gigs_that_year))
+        }
+        time1.innerHTML = group1.reduce((partialSum, a) => partialSum + a, 0)
+        time2.innerHTML = group2.reduce((partialSum, a) => partialSum + a, 0)
+        time3.innerHTML = group3.reduce((partialSum, a) => partialSum + a, 0)
         
+    } catch (error) {
+        new Error("Failed to get years")
     }
 }
 
