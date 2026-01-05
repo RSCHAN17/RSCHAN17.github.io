@@ -238,7 +238,7 @@ footer p {
   .imgGrid {
   display: grid;
   margin: 0 auto;
-  width: 65%;
+  width: 75%;
   grid-template: unset;
   grid-template-rows: repeat(4,25%);
   text-align: center;
@@ -251,7 +251,7 @@ footer p {
   } */
   .box {
     aspect-ratio: 1;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .grid {
     aspect-ratio: 1;
@@ -272,6 +272,7 @@ footer p {
   } */
   .description {
     margin : 25px 0;
+    font-size: 0.8rem;
   }
 
   .half-list {
