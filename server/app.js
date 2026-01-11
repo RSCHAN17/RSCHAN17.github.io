@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-const logger = require('./logger')
-const clicheRouter = require('./routers/cliches');
-const gigRouter = require('./routers/gigs');
+import logger from './logger';
+import clicheRouter from './routers/cliches';
+import gigRouter from './routers/gigs';
 
 const app = express();
 app.use(cors());

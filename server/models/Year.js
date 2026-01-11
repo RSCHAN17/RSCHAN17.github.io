@@ -1,4 +1,4 @@
-const db = require('../db/connect');
+import db from '../db/connect';
 
 class Year {
     constructor({year,gigs_that_year}){

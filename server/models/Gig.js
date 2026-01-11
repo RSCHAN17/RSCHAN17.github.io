@@ -1,4 +1,4 @@
-const db = require('../db/connect');
+import db from '../db/connect';
 
 class Gig {
     constructor({gig_id,date,name,type}){

@@ -1,4 +1,4 @@
-const db = require('../db/connect');
+import db from '../db/connect';
 
 class Cliche {
     constructor({cliche_id,cliche,status,origin,insta}) {

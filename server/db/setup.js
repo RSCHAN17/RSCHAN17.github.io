@@ -1,6 +1,7 @@
-require('dotenv').config();
-const fs = require('fs');
-const db = require('./connect');
+import dotenv from 'dotenv'
+dotenv.config()
+import fs from 'fs';
+import db from './connect';
 
 const sql = fs.readFileSync('./db/gigs.sql').toString();
 
