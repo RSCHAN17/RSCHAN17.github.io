@@ -36,10 +36,15 @@ jobs:
         run: node fetchdata.js
 
       - name: Commit gigs data if changed
-        run:
+        run: |
           git config user.name "github-actions[bot]"
           git config suer.email "github-actions[bot]@users.noreply.github.com"
-          git add . || true
+          git add server\data\cliches.json server\data\festivals.json server\data\gigs.json server\data\years.json || true
+          git commit -m "ci: update gig data" || echo "No changes to commit"
+          git push || echo "Push failed or no changes"
+
+      - name: Trigger Render Deploy
+        run: cur -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
           
         
 

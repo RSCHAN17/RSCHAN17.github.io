@@ -1,6 +1,3 @@
-const load = document.querySelectorAll('.box')
-load.innerHTML = `<div class="spinner-border" role="status"> <span class="visually-hidden">Loading...</span></div>`
-
 let completeList = []
 const start = fetchAllCliches()
 const gigs = fetchGigs() 
