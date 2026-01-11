@@ -48,7 +48,7 @@ jobs:
           git push || echo "Push failed or no changes"
 
       - name: Trigger Render Deploy
-        run: cur -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
           
         
 
