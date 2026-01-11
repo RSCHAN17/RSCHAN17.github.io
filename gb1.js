@@ -23,7 +23,7 @@ async function fetchGigs() {
         const dataAll = await respAll.json()
         gig_num=dataAll.length;
         intro.innerHTML= `My name is Raza, I've always had a love for live music, ${gig_num} gigs so far (30 last year).
-                Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, and why
+                Gigs and concerts are a lot of fun, but the more you go to, the more you notice some clichés, why
                 not turn those clichés into a game? Hence the birth of Gig Bingo!`
     } catch (error) {
         new Error("Failed to get gigs")
