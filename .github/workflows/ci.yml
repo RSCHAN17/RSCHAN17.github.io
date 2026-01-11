@@ -35,13 +35,15 @@ jobs:
       - name: Fetch latest Gigs
         env:
           CLICHES_API_KEY: ${{ secrets.CLICHES_API_KEY }}
-        run: node server\fetchdata.js
+        run: |
+          cd server
+          node fetchdata.js
 
       - name: Commit gigs data if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config suer.email "github-actions[bot]@users.noreply.github.com"
-          git add server\data\cliches.json server\data\festivals.json server\data\gigs.json server\data\years.json || true
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add server/data/ . || true
           git commit -m "ci: update gig data" || echo "No changes to commit"
           git push || echo "Push failed or no changes"
 
