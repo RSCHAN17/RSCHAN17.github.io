@@ -1,4 +1,4 @@
-const Cliche = require('../models/Cliche.js');
+const Cliche = require('../models/Cliche');
 
 async function index(req, res) {
     try {
