@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import logger from './logger.js';
+const logger = require('./logger.js');
 const clicheRouter = require('./routers/cliches.js');
 const gigRouter = require('./routers/gigs.js');
 
