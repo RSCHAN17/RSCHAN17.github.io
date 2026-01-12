@@ -24,4 +24,4 @@ class Gig {
     }
 }
 
-module.exports = Gig
+module.exports = Gig;

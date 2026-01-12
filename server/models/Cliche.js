@@ -31,4 +31,4 @@ class Cliche {
 
 }
 
-module.exports = Cliche
+module.exports = Cliche;
