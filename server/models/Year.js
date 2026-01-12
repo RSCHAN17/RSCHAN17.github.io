@@ -14,4 +14,4 @@ class Year {
     }
 }
 
-module.exports = Year
+export default Year

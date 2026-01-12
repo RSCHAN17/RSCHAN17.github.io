@@ -24,4 +24,4 @@ class Gig {
     }
 }
 
-module.exports = Gig;
+export default Gig;

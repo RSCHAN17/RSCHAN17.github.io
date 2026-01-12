@@ -1,5 +1,5 @@
-const Gig = require('../models/Gig');
-const Year =require('../models/Year');
+import Gig from '../models/Gig.js';
+import Year from '../models/Year.js';
 
 async function index(req, res) {
     try {
@@ -27,4 +27,4 @@ async function years(req, res) {
 }
 
 
-module.exports = {index,festivals,years}
+export default {index,festivals,years}

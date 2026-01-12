@@ -1,4 +1,4 @@
-const Cliche = require('../models/Cliche');
+import Cliche from '../models/Cliche.js';
 
 async function index(req, res) {
     try {
@@ -19,4 +19,4 @@ async function create (req, res) {
     }
 }
 
-module.exports = {index, create}
+export default {index, create}

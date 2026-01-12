@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const clicheController = require('../controllers/cliches')
+import clicheController from '../controllers/cliches.js';
 
 const clicheRouter = Router();
 
 clicheRouter.get("/all", clicheController.index);
 clicheRouter.post("/", clicheController.create);
 
-module.exports = clicheRouter;
+export default clicheRouter;
