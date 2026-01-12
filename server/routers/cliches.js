@@ -1,4 +1,4 @@
-const { Router } = require('express');
+import { Router } from 'express';
 import clicheController from '../controllers/cliches.js';
 
 const clicheRouter = Router();

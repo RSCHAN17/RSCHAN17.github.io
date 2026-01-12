@@ -1,4 +1,4 @@
-const { Router } = require('express');
+import { Router } from 'express';
 import gigController from '../controllers/gigs.js';
 
 const gigRouter = Router()
