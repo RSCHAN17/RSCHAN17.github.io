@@ -1,4 +1,4 @@
-import db from '../db/connect';
+import db from '../db/connect.js';
 
 class Gig {
     constructor({gig_id,date,name,type}){

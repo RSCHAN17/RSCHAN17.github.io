@@ -1,4 +1,4 @@
-import db from '../db/connect';
+import db from '../db/connect.js';
 
 class Year {
     constructor({year,gigs_that_year}){
