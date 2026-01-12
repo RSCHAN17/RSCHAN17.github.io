@@ -16,10 +16,11 @@ const festivals1 = document.querySelector('#festivals1')
 const festivals2 = document.querySelector('#festivals2')
 const festivals3 = document.querySelector('#festivals3')
 
+const lastUpdated = document.querySelector('#lastUpdated')
 
 async function fetchGigs() {
     try {
-        const respAll = await fetch('https://rschan17-github-io.onrender.com/gigs/all')
+        const respAll = await fetch('/server/data/gigs.json')
         const dataAll = await respAll.json()
         gig_num=dataAll.length;
         intro.innerHTML= `My name is Raza, I've always had a love for live music, ${gig_num} gigs so far (30 last year).
@@ -31,7 +32,7 @@ async function fetchGigs() {
 }
 async function fetchFestivals() {
     try {
-        const respFestivals= await fetch('https://rschan17-github-io.onrender.com/gigs/festivals')
+        const respFestivals= await fetch('/server/data/festivals.json')
         const dataFestivals = await respFestivals.json()
         const li1 = festivals1.appendChild(document.createElement("li"))
         li1.innerHTML=dataFestivals[0].name
@@ -53,7 +54,7 @@ async function fetchFestivals() {
 }
 async function fetchYears() {
     try {
-        const respYears = await fetch('https://rschan17-github-io.onrender.com/gigs/years')
+        const respYears = await fetch('/server/data/years.json')
         const dataYears = await respYears.json()
         let group1 = []
         let group2 = []
@@ -110,8 +111,11 @@ for (let i=1; i<25; i++) {
 
 async function fetchAllCliches() {
     try {
-        const response = await fetch(`https://rschan17-github-io.onrender.com/cliches/all`);
+        const response = await fetch(`/server/data/cliches.json`);
         const data = await response.json()
+        const time = data.pop()
+        console.log(data);
+        lastUpdated.innerHTML = `last updated: ${time}`
         for (let i=1; i<data.length; i++) {
             if(i%2===0) {
                 completeList.push(data[i]["cliche"])
