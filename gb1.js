@@ -7,10 +7,6 @@ let bingoBoard = []
 const clicheList1 = document.querySelector('#allTropes1')
 const clicheList2 = document.querySelector('#allTropes2')
 
-;
-// if (navbar.className = "collapse navbar-collapse show") {
-//     console.log(1);
-// }
 
 const intro = document.querySelector('#intro')
 
@@ -119,7 +115,6 @@ async function fetchAllCliches() {
         const response = await fetch(`/server/data/cliches.json`);
         const data = await response.json()
         const time = data.pop()
-        console.log(data);
         lastUpdated.innerHTML = `last updated: ${time}`
         for (let i=1; i<data.length; i++) {
             if(i%2===0) {
