@@ -33,7 +33,10 @@ h1, h2, h3, footer {
 }
 
 #favourites ol {
+  padding-left: 1rem;
+  padding-right:0.1rem;
   text-align: left;
+  margin:5px auto
 }
 
 .imgGrid {
@@ -101,7 +104,11 @@ h1, h2, h3, footer {
   line-height: 1;
   letter-spacing: 0.1px;
   text-align:center;
-  padding: 0;
+  padding: 0.2rem;
+}
+
+#rgc-title {
+  margin-bottom: 15px;
 }
 
 table, th, td {
@@ -113,6 +120,7 @@ table, th, td {
 
 table {
   width: 100%;
+  text-align: center;
 }
 
 
@@ -227,35 +235,46 @@ footer p {
 }
 
 @media only screen and ((max-width: 1200px)) {
+  .image, .box, #rgc,table td, table th, .whole, .tropeForm, #send {
+    border: solid 2px black;
+  }
+  footer {
+    border-top: solid 2px black;
+  }
 
-  .navigation, .about, #rgc, .fullList, .tropeForm, .grid {
+   .about, #rgc, .fullList, .tropeForm, .grid {
     width: 95%;
   }
   .imgGrid {
-  display: grid;
-  margin: 0 auto;
-  width: 75%;
-  grid-template: unset;
-  grid-template-rows: repeat(4,25%);
-  text-align: center;
-  align-items: center;
-  aspect-ratio: auto;
-  gap: 0.5%;
+    display: grid;
+    margin: 0 auto;
+    width: 75%;
+    grid-template: unset;
+    grid-template-rows: repeat(4,25%);
+    text-align: center;
+    align-items: center;
+    aspect-ratio: auto;
+    gap: 0.5%;
   }
   /* .navigation a {
     font-size: 0.7rem;
   } */
   .box {
     aspect-ratio: 1;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .grid {
     aspect-ratio: 1;
+    right:4px;
   }
   .main {
     margin-bottom: 0;
     height: 70%;
     margin-top: 25px;
+  }
+
+  #rgc {
+    font-size: 0.8rem;
   }
   
   #favourites {
@@ -265,7 +284,7 @@ footer p {
   }
 
   .description {
-    margin : 25px 0;
+    margin : 15px 0;
     font-size: 0.8rem;
   }
 
@@ -277,8 +296,5 @@ footer p {
   .list-group-item {
     font-size: 0.8rem;
   }
-
-
-
 }
 

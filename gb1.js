@@ -7,6 +7,11 @@ let bingoBoard = []
 const clicheList1 = document.querySelector('#allTropes1')
 const clicheList2 = document.querySelector('#allTropes2')
 
+;
+// if (navbar.className = "collapse navbar-collapse show") {
+//     console.log(1);
+// }
+
 const intro = document.querySelector('#intro')
 
 const time1 = document.querySelector('#time1')
