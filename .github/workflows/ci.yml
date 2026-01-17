@@ -29,14 +29,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd server
+          cd server/
           npm ci 
 
       - name: Fetch latest Gigs
         env:
           CLICHES_API_KEY: ${{ secrets.CLICHES_API_KEY }}
         run: |
-          cd server
+          cd server/
           node fetchdata.js
 
       - name: Commit gigs data if changed
