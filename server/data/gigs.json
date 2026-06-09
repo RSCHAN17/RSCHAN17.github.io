@@ -384,12 +384,6 @@
     "type": "gig"
   },
   {
-    "gig_id": 65,
-    "date": "2025-12-10T00:00:00.000Z",
-    "name": "Mumford and sons",
-    "type": "gig"
-  },
-  {
     "gig_id": 66,
     "date": "2025-12-19T00:00:00.000Z",
     "name": "Kingfishr/Aaron rowe",
@@ -405,6 +399,48 @@
     "gig_id": 68,
     "date": "2026-03-21T00:00:00.000Z",
     "name": "Scouting for Girls",
+    "type": "gig"
+  },
+  {
+    "gig_id": 65,
+    "date": "2025-12-10T00:00:00.000Z",
+    "name": "Mumford & Sons",
+    "type": "gig"
+  },
+  {
+    "gig_id": 69,
+    "date": "2026-03-25T00:00:00.000Z",
+    "name": "Mumford & Sons - secret",
+    "type": "gig"
+  },
+  {
+    "gig_id": 70,
+    "date": "2026-04-02T00:00:00.000Z",
+    "name": "5 Seconds of Summer",
+    "type": "gig"
+  },
+  {
+    "gig_id": 71,
+    "date": "2026-05-02T00:00:00.000Z",
+    "name": "Olivia Dean",
+    "type": "gig"
+  },
+  {
+    "gig_id": 72,
+    "date": "2026-05-11T00:00:00.000Z",
+    "name": "InColor",
+    "type": "gig"
+  },
+  {
+    "gig_id": 73,
+    "date": "2026-05-20T00:00:00.000Z",
+    "name": "Kingfishr",
+    "type": "gig"
+  },
+  {
+    "gig_id": 74,
+    "date": "2026-05-21T00:00:00.000Z",
+    "name": "Kingfishr",
     "type": "gig"
   }
 ]
