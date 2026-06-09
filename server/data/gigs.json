@@ -400,5 +400,11 @@
     "date": "2026-02-02T00:00:00.000Z",
     "name": "Only The Poets",
     "type": "gig"
+  },
+  {
+    "gig_id": 68,
+    "date": "2026-03-21T00:00:00.000Z",
+    "name": "Scouting for Girls",
+    "type": "gig"
   }
 ]
