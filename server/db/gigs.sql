@@ -29,8 +29,10 @@ create table cliches (
     status varchar(100) default 'accepted',
     origin varchar(100) default 'BTFAQL',
     insta varchar(100) default 'raza.chandna',
+    genre varchar(100) default 'All',
     primary key (cliche_id),
-    check (status in ('pending','accepted','rejected'))
+    check (status in ('pending','accepted','rejected')),
+    check (status in ('All','Rock','Pop','Indie','EDM'))
 );
 
 insert into cliches (cliche)
